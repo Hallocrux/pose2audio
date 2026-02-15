@@ -1,0 +1,14 @@
+sofa: assets/kemar_windowed_48k.sofa
+pose_provider: mediapipe
+
+display_provider: 3d
+display_hz: 20
+source_provider: fixed
+direction_provider: stabilized
+direction_min_distance_m: 0.15
+direction_smoothing: 0.2
+direction_deadband_deg: 1.0
+acoustic_frame_provider: auto
+source_az: 30
+source_el: 0
+source_distance: 1.0

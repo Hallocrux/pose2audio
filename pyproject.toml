@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visualsound"
+version = "0.1.0"
+description = "Real-time head-tracked binaural spatial audio demo"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+  "numpy>=1.21.0",
+  "sounddevice",
+  "netCDF4",
+  "soundfile",
+  "mediapipe>=0.10.0",
+  "opencv-python",
+  "open3d>=0.19.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+visualsound = "VisualSound.current:main"
+
+[tool.setuptools]
+packages = [
+  "VisualSound",
+  "VisualSound.audio",
+  "VisualSound.control",
+  "VisualSound.hrtf",
+  "VisualSound.math3d",
+  "VisualSound.pose_providers",
+  "VisualSound.ui",
+]
+
+[tool.setuptools.package-dir]
+VisualSound = "."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

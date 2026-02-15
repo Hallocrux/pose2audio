@@ -1,0 +1,29 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+.dotnet-home/
+
+# Node
+node_modules/
+dist/
+build/
+
+# .NET
+**/bin/
+**/obj/
+
+# Logs
+*.log
+
+
+assets/

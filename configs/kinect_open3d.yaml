@@ -1,0 +1,17 @@
+sofa: assets/kemar_windowed_48k.sofa
+pose_provider: kinectv2
+kinect_bridge_host: 127.0.0.1
+kinect_bridge_port: 24567
+
+display_provider: open3d
+display_hz: 60
+
+source_provider: camera
+
+direction_provider: stabilized
+direction_min_distance_m: 0.15
+direction_smoothing: 0.2
+direction_deadband_deg: 1.0
+acoustic_frame_provider: auto
+
+audio: assets/music.wav
