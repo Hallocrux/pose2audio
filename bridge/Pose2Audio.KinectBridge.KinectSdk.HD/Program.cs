@@ -8,7 +8,7 @@ using System.Threading;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Face;
 
-namespace VisualSound.KinectBridge.KinectSdk.HD
+namespace Pose2Audio.KinectBridge.KinectSdk.HD
 {
     internal sealed class Program
     {
@@ -521,7 +521,7 @@ namespace VisualSound.KinectBridge.KinectSdk.HD
 
         public static string HelpText =
 @"Usage:
-  VisualSound.KinectBridge.KinectSdk.HD [--host 127.0.0.1] [--port 24567] [--hz 60] [--duration-sec 0] [--source-x 0] [--source-y 0] [--source-z 1] [--cli-output live|scroll]
+  Pose2Audio.KinectBridge.KinectSdk.HD [--host 127.0.0.1] [--port 24567] [--hz 60] [--duration-sec 0] [--source-x 0] [--source-y 0] [--source-z 1] [--cli-output live|scroll]
 
 Notes:
   - Requires Kinect for Windows SDK v2 and Kinect V2 sensor/runtime.

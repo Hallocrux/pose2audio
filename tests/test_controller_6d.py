@@ -1,9 +1,9 @@
 import numpy as np
 
-from VisualSound.control.controller import head_relative_source_vector
-from VisualSound.control.pose import Pose6D
-from VisualSound.math3d.coords import vec_to_az_el_deg
-from VisualSound.math3d.quaternion import euler_yaw_pitch_roll_to_q
+from Pose2Audio.control.controller import head_relative_source_vector
+from Pose2Audio.control.pose import Pose6D
+from Pose2Audio.math3d.coords import vec_to_az_el_deg
+from Pose2Audio.math3d.quaternion import euler_yaw_pitch_roll_to_q
 
 
 def test_head_relative_vector_identity_pose():

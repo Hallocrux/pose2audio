@@ -1,4 +1,4 @@
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal enum BridgeMode
 {
@@ -20,7 +20,7 @@ internal sealed record BridgeOptions(
 {
     public const string HelpText = """
 Usage:
-  VisualSound.KinectBridge [--host 127.0.0.1] [--port 24567] [--hz 60] [--mode mock|stdin-json|kinect-sdk] [--duration-sec 0] [--source-x 0] [--source-y 0] [--source-z 1] [--cli-output live|scroll]
+  Pose2Audio.KinectBridge [--host 127.0.0.1] [--port 24567] [--hz 60] [--mode mock|stdin-json|kinect-sdk] [--duration-sec 0] [--source-x 0] [--source-y 0] [--source-z 1] [--cli-output live|scroll]
 
 Modes:
   mock        Generate synthetic 6DoF data for end-to-end validation.

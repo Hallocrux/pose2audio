@@ -1,8 +1,8 @@
 import numpy as np
 
-from VisualSound.control.pose import Pose6D
-from VisualSound.control.pose_provider import PoseProvider
-from VisualSound.control.source_provider import (
+from Pose2Audio.control.pose import Pose6D
+from Pose2Audio.control.pose_provider import PoseProvider
+from Pose2Audio.control.source_provider import (
     CameraOriginSourceProvider,
     FirstHeadSourceProvider,
     FixedSourceProvider,

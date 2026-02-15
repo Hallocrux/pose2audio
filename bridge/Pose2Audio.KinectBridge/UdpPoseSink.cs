@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal sealed class UdpPoseSink : IPoseSink
 {

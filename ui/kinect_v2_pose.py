@@ -1,4 +1,4 @@
-"""Compatibility shim; use VisualSound.pose_providers.kinect_v2_pose."""
+"""Compatibility shim; use Pose2Audio.pose_providers.kinect_v2_pose."""
 
 from __future__ import annotations
 

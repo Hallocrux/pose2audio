@@ -113,7 +113,7 @@ class TuiDisplayProvider(DisplayProvider):
 
         self.cli_sink.emit(
             lines=[
-                "VisualSound Live Scene",
+                "Pose2Audio Live Scene",
                 f"head xyz      = ({p[0]: .3f}, {p[1]: .3f}, {p[2]: .3f})",
                 f"source xyz    = ({src[0]: .3f}, {src[1]: .3f}, {src[2]: .3f})",
                 f"s_head xyz    = ({s[0]: .3f}, {s[1]: .3f}, {s[2]: .3f})",
@@ -142,7 +142,7 @@ class TuiDisplayProvider(DisplayProvider):
 class Matplotlib3DAnimationDisplayProvider(DisplayProvider):
     """Simple 3D animated scene display using matplotlib."""
 
-    def __init__(self, title: str = "VisualSound 3D Scene"):
+    def __init__(self, title: str = "Pose2Audio 3D Scene"):
         try:
             import matplotlib.pyplot as plt
         except Exception as exc:  # pragma: no cover - optional dependency path
@@ -393,7 +393,7 @@ class Open3DAnimationDisplayProvider(DisplayProvider):
     def __init__(
         self,
         pose_provider: PoseProvider,
-        title: str = "VisualSound Open3D Scene",
+        title: str = "Pose2Audio Open3D Scene",
     ):
         try:
             import open3d as o3d

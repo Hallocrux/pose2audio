@@ -1,4 +1,4 @@
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal interface IPoseSource : IDisposable
 {

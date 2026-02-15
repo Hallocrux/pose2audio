@@ -1,4 +1,4 @@
-"""Compatibility shim; use VisualSound.pose_providers.mediapipe_cam."""
+"""Compatibility shim; use Pose2Audio.pose_providers.mediapipe_cam."""
 
 from __future__ import annotations
 

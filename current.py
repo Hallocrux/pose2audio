@@ -164,7 +164,7 @@ def resolve_initial_source_world(cfg, fixed_source_world: np.ndarray) -> np.ndar
 def build_pose_provider(cfg, sr: int, initial_source_world: np.ndarray):
     if cfg.pose_provider == "toycv":
         return ToyCvTkPoseProvider(
-            title="VisualSound - ToyCV Head Pose",
+            title="Pose2Audio - ToyCV Head Pose",
             source_world=initial_source_world,
             sr=sr,
         )
@@ -174,7 +174,7 @@ def build_pose_provider(cfg, sr: int, initial_source_world: np.ndarray):
             from .pose_providers.mediapipe_cam import MediaPipeCamPoseProvider
 
             return MediaPipeCamPoseProvider(
-                title="VisualSound - MediaPipe Monocular Head Pose",
+                title="Pose2Audio - MediaPipe Monocular Head Pose",
                 source_world=initial_source_world,
                 sr=sr,
                 camera_index=cfg.camera_index,
@@ -192,7 +192,7 @@ def build_pose_provider(cfg, sr: int, initial_source_world: np.ndarray):
             from .pose_providers.kinect_v2_pose import KinectV2PoseProvider
 
             return KinectV2PoseProvider(
-                title="VisualSound - Kinect V2 Face Pose",
+                title="Pose2Audio - Kinect V2 Face Pose",
                 source_world=initial_source_world,
                 sr=sr,
                 smoothing=cfg.pose_smoothing,
@@ -208,7 +208,7 @@ def build_pose_provider(cfg, sr: int, initial_source_world: np.ndarray):
         logger.exception("[POSE] failed to init requested pose provider")
         logger.warning("[POSE] fallback to ToyCV sliders")
         return ToyCvTkPoseProvider(
-            title="VisualSound - ToyCV Head Pose (fallback)",
+            title="Pose2Audio - ToyCV Head Pose (fallback)",
             source_world=initial_source_world,
             sr=sr,
         )
@@ -223,7 +223,7 @@ def build_display_provider(cfg, pose_provider):
 
     if cfg.display_provider == "3d":
         try:
-            return Matplotlib3DAnimationDisplayProvider(title="VisualSound 3D Scene")
+            return Matplotlib3DAnimationDisplayProvider(title="Pose2Audio 3D Scene")
         except RuntimeError:
             logger.exception("[DISPLAY] failed to initialize 3D display provider")
             logger.warning("[DISPLAY] fallback to tui provider")
@@ -236,7 +236,7 @@ def build_display_provider(cfg, pose_provider):
         try:
             return Open3DAnimationDisplayProvider(
                 pose_provider=pose_provider,
-                title="VisualSound Open3D Scene",
+                title="Pose2Audio Open3D Scene",
             )
         except RuntimeError:
             logger.exception("[DISPLAY] failed to initialize Open3D display provider")

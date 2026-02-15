@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal sealed class CliStatusPrinter
 {
@@ -139,8 +139,8 @@ internal static class Program
     private static IPoseSource CreateKinectSourceOrThrow()
     {
         throw new InvalidOperationException(
-            "kinect-sdk mode lives in dedicated project: bridge/VisualSound.KinectBridge.KinectSdk. " +
-            "Run: dotnet run --project bridge\\VisualSound.KinectBridge.KinectSdk -- --host 127.0.0.1 --port 24567 --hz 60");
+            "kinect-sdk mode lives in dedicated project: bridge/Pose2Audio.KinectBridge.KinectSdk. " +
+            "Run: dotnet run --project bridge\\Pose2Audio.KinectBridge.KinectSdk -- --host 127.0.0.1 --port 24567 --hz 60");
     }
 
     private static bool TryComputeHrtfAzEl(PoseSample pose, BridgeOptions options, out double az, out double el)

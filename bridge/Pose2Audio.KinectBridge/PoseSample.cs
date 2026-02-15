@@ -1,4 +1,4 @@
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal readonly record struct PoseSample(
     bool Tracked,

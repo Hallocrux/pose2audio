@@ -12,7 +12,7 @@ Real-time head-tracked binaural spatial audio demo.
 
 ## Geometry Conventions
 
-VisualSound uses one acoustic frame contract across all providers:
+Pose2Audio uses one acoustic frame contract across all providers:
 
 - acoustic `x`: right
 - acoustic `y`: up
@@ -53,44 +53,44 @@ extrinsic calibration):
 Install and run:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --pose-provider toycv
+uv run pose2audio --sofa path\to\your.sofa --pose-provider toycv
 ```
 
 Run with webcam head pose:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --pose-provider mediapipe
+uv run pose2audio --sofa path\to\your.sofa --pose-provider mediapipe
 ```
 
 Use audio file:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --audio assets\music.wav --loop
+uv run pose2audio --sofa path\to\your.sofa --audio assets\music.wav --loop
 ```
 
 Run with Kinect bridge stream (future C# provider):
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --pose-provider kinectv2 --kinect-bridge-host 127.0.0.1 --kinect-bridge-port 24567
+uv run pose2audio --sofa path\to\your.sofa --pose-provider kinectv2 --kinect-bridge-host 127.0.0.1 --kinect-bridge-port 24567
 ```
 
 Use default TUI display provider:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --display-provider tui --cli-output live
+uv run pose2audio --sofa path\to\your.sofa --display-provider tui --cli-output live
 ```
 
 Use simple 3D animation display provider:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --display-provider 3d --display-hz 20
+uv run pose2audio --sofa path\to\your.sofa --display-provider 3d --display-hz 20
 ```
 
 Use high-performance Open3D display provider:
 
 ```powershell
 uv add open3d
-uv run visualsound --sofa path\to\your.sofa --display-provider open3d --display-hz 60
+uv run pose2audio --sofa path\to\your.sofa --display-provider open3d --display-hz 60
 ```
 
 Open3D controls:
@@ -103,31 +103,31 @@ Open3D controls:
 Use source-at-camera provider:
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --source-provider camera
+uv run pose2audio --sofa path\to\your.sofa --source-provider camera
 ```
 
 Force acoustic frame mapping explicitly (defaults to `auto`):
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --source-provider camera --acoustic-frame-provider flip-front
+uv run pose2audio --sofa path\to\your.sofa --source-provider camera --acoustic-frame-provider flip-front
 ```
 
 Use source-at-first-head provider (latched at first tracked head pose):
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --source-provider first-head
+uv run pose2audio --sofa path\to\your.sofa --source-provider first-head
 ```
 
 Use stabilized direction provider to reduce az/el jitter (default):
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --direction-provider stabilized --direction-min-distance-m 0.15 --direction-smoothing 0.2 --direction-deadband-deg 1.0
+uv run pose2audio --sofa path\to\your.sofa --direction-provider stabilized --direction-min-distance-m 0.15 --direction-smoothing 0.2 --direction-deadband-deg 1.0
 ```
 
 Run with YAML startup config:
 
 ```powershell
-uv run visualsound --config .\configs\kinect_open3d.yaml
+uv run pose2audio --config .\configs\kinect_open3d.yaml
 ```
 
 Example `configs/kinect_open3d.yaml`:
@@ -153,19 +153,19 @@ source_distance: 1.0
 Start C# bridge (mock mode for integration test):
 
 ```powershell
-dotnet run --project bridge\VisualSound.KinectBridge -- --mode mock --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
+dotnet run --project bridge\Pose2Audio.KinectBridge -- --mode mock --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
 ```
 
 Start C# bridge (real Kinect SDK mode):
 
 ```powershell
-dotnet run --project bridge\VisualSound.KinectBridge.KinectSdk -- --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
+dotnet run --project bridge\Pose2Audio.KinectBridge.KinectSdk -- --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
 ```
 
 Start C# bridge (HD Face Kinect SDK mode):
 
 ```powershell
-dotnet run --project bridge\VisualSound.KinectBridge.KinectSdk.HD -- --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
+dotnet run --project bridge\Pose2Audio.KinectBridge.KinectSdk.HD -- --host 127.0.0.1 --port 24567 --hz 60 --duration-sec 0 --cli-output live
 ```
 
 ## Useful Options
@@ -208,7 +208,7 @@ Use `--source-provider camera` with acoustic mapping set to `auto` (or explicit
 `flip-front` for camera-style sensors):
 
 ```powershell
-uv run visualsound --sofa path\to\your.sofa --source-provider camera --acoustic-frame-provider auto
+uv run pose2audio --sofa path\to\your.sofa --source-provider camera --acoustic-frame-provider auto
 ```
 
 `auto` chooses provider defaults:

@@ -1,10 +1,10 @@
 import numpy as np
 
-from VisualSound.control.direction_provider import (
+from Pose2Audio.control.direction_provider import (
     RawDirectionProvider,
     StabilizedDirectionProvider,
 )
-from VisualSound.control.pose import Pose6D
+from Pose2Audio.control.pose import Pose6D
 
 
 def _pose_at(x: float, y: float, z: float) -> Pose6D:

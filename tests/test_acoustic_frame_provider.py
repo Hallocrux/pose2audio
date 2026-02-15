@@ -1,10 +1,10 @@
 import numpy as np
 
-from VisualSound.control.acoustic_frame_provider import (
+from Pose2Audio.control.acoustic_frame_provider import (
     FlipFrontAcousticFrameProvider,
     IdentityAcousticFrameProvider,
 )
-from VisualSound.control.pose import Pose6D
+from Pose2Audio.control.pose import Pose6D
 
 
 def _identity_pose() -> Pose6D:

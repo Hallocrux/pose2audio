@@ -6,8 +6,8 @@
     <LangVersion>7.3</LangVersion>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-    <AssemblyName>VisualSound.KinectBridge.KinectSdk.HD</AssemblyName>
-    <RootNamespace>VisualSound.KinectBridge.KinectSdk.HD</RootNamespace>
+    <AssemblyName>Pose2Audio.KinectBridge.KinectSdk.HD</AssemblyName>
+    <RootNamespace>Pose2Audio.KinectBridge.KinectSdk.HD</RootNamespace>
     <PlatformTarget>x64</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>

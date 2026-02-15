@@ -1,4 +1,4 @@
-"""Compatibility shim; use VisualSound.pose_providers.toycv_tk."""
+"""Compatibility shim; use Pose2Audio.pose_providers.toycv_tk."""
 
 from __future__ import annotations
 

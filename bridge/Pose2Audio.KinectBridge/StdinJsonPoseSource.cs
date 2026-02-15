@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace VisualSound.KinectBridge;
+namespace Pose2Audio.KinectBridge;
 
 internal sealed class StdinJsonPoseSource : IPoseSource
 {

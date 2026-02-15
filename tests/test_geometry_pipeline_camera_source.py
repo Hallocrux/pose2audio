@@ -1,12 +1,12 @@
 import numpy as np
 
-from VisualSound.control.acoustic_frame_provider import (
+from Pose2Audio.control.acoustic_frame_provider import (
     FlipFrontAcousticFrameProvider,
     IdentityAcousticFrameProvider,
 )
-from VisualSound.control.direction_provider import RawDirectionProvider
-from VisualSound.control.pose import Pose6D
-from VisualSound.math3d.coords import vec_to_az_el_deg
+from Pose2Audio.control.direction_provider import RawDirectionProvider
+from Pose2Audio.control.pose import Pose6D
+from Pose2Audio.math3d.coords import vec_to_az_el_deg
 
 
 def test_camera_source_is_front_after_flip_front_mapping():

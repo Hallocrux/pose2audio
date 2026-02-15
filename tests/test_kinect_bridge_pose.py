@@ -1,6 +1,6 @@
 import numpy as np
 
-from VisualSound.pose_providers.kinect_v2_pose import _parse_pose_packet, _parse_pose_payload
+from Pose2Audio.pose_providers.kinect_v2_pose import _parse_pose_packet, _parse_pose_payload
 
 
 def test_parse_pose_payload_accepts_valid_schema():
