@@ -1,4 +1,4 @@
-# VisualSound
+# Pose2Audio
 
 Real-time head-tracked binaural spatial audio demo.
 
